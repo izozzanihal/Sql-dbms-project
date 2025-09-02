@@ -1,0 +1,137 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Body Background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+}
+
+/* Login Container */
+form {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    animation: slideIn 0.8s ease;
+}
+
+/* Title */
+h2 {
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #1f4037;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid #1f4037;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0072ff, #0052cc);
+}
+
+/* Error Message */
+p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: red;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    form {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Animated background */
+@keyframes moveBox {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+  10% { transform: translateY(-10vh) rotate(36deg); opacity: 0.6; }
+  20% { transform: translateY(-20vh) rotate(72deg); opacity: 0.6; }
+  30% { transform: translateY(-25vh) rotate(90deg); opacity: 0.6; }
+  40% { transform: translateY(-40vh) rotate(144deg); opacity: 0.6; }
+  50% { transform: translateY(-50vh) rotate(180deg); opacity: 0.7; }
+  60% { transform: translateY(-60vh) rotate(216deg); opacity: 0.7; }
+  70% { transform: translateY(-25vh) rotate(270deg); opacity: 0.6; }
+  80% { transform: translateY(0) rotate(360deg); opacity: 0.5; }
+  90% { transform: translateY(0) rotate(360deg); opacity: 0.5; }
+  100% { transform: translateY(0) rotate(360deg); opacity: 0.5; }
+
+}
+
+.bg-box {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  animation: moveBox 10s linear infinite;
+}
+.bg-box:nth-child(1) { left: 10%; animation-duration: 5s; }
+.bg-box:nth-child(2) { left: 20%; animation-duration: 8s; }
+.bg-box:nth-child(3) { left: 30%; animation-duration: 12s; }
+.bg-box:nth-child(4) { left: 40%; animation-duration: 15s; }
+.bg-box:nth-child(5) { left: 50%; animation-duration: 18s; }
+.bg-box:nth-child(6) { left: 60%; animation-duration: 18s; }
+.bg-box:nth-child(7) { left: 70%; animation-duration: 15s; }
+.bg-box:nth-child(8) { left: 80%; animation-duration: 12s; }
+.bg-box:nth-child(9) { left: 90%; animation-duration: 8s; }
+.bg-box:nth-child(10) { left: 100%; animation-duration: 5s; }
